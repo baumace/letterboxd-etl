@@ -1,0 +1,21 @@
+[project]
+name = "letterboxd-etl"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ace Baum",email = "jaybaum.03@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.3.3,<3.0.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "supabase (>=2.23.2,<3.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
