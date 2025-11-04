@@ -17,13 +17,14 @@ def load(letterbox_records):
         raise RuntimeError("KEY is NONE")
 
     supabase = create_client(url, key)
+    table_name = "letterboxd-diary"
 
     print("\tdeleting letterboxd records...")
-    supabase.table("diary").delete().neq("id", 0).execute()
+    supabase.table(table_name).delete().neq("id", 0).execute()
     print("\tdeleted letterboxd records...")
 
     print("\tinserting letterboxd records...")
-    supabase.table("diary").insert(letterbox_records).execute()
+    supabase.table(table_name).insert(letterbox_records).execute()
     print("\tinserted letterboxd records...")
 
     print("loaded letterboxd records...")
